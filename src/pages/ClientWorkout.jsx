@@ -237,11 +237,9 @@ const styles = {
   screen: {
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '100dvh',
+    height: '100dvh',
+    width: '100%',
     background: 'var(--bg-main)',
-    maxWidth: '480px',
-    margin: '0 auto',
-    boxShadow: '0 0 40px rgba(0,0,0,0.05)',
     position: 'relative',
     overflow: 'hidden',
   },
