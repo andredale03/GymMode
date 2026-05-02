@@ -103,18 +103,18 @@ export default function AdminDashboard() {
   return (
     <div className="container animate-fade-in" style={{ padding: '1.5rem', maxWidth: '1200px' }}>
       {/* Header */}
-      <header className="flex items-center justify-between mb-4" style={{ background: 'var(--bg-card)', padding: '1rem 1.5rem', borderRadius: '16px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <div style={{ width: '48px', height: '48px', borderRadius: '16px', background: 'var(--accent)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.25rem', boxShadow: '0 4px 6px -1px rgba(59, 130, 246, 0.3)' }}>
+      <header className="flex items-center justify-between mb-4" style={{ background: 'var(--bg-card)', padding: '1rem 1.25rem', borderRadius: '16px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)', gap: '1rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', minWidth: 0 }}>
+          <div style={{ width: '44px', height: '44px', flexShrink: 0, borderRadius: '14px', background: 'var(--accent)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.15rem', boxShadow: '0 4px 6px -1px rgba(59, 130, 246, 0.3)' }}>
             {user?.email?.charAt(0).toUpperCase()}
           </div>
-          <div>
-            <h1 className="mb-1" style={{ fontSize: '1.5rem', lineHeight: 1.2, margin: 0 }}>Trainer Dashboard</h1>
-            <p className="text-secondary" style={{ fontSize: '0.9rem', margin: 0 }}>{user?.email}</p>
+          <div style={{ minWidth: 0, overflow: 'hidden' }}>
+            <h1 className="mb-1" style={{ fontSize: '1.25rem', lineHeight: 1.2, margin: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Trainer Dashboard</h1>
+            <p className="text-secondary" style={{ fontSize: '0.85rem', margin: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{user?.email}</p>
           </div>
         </div>
-        <button onClick={handleLogout} className="btn btn-outline" style={{ padding: '0.6rem', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <LogOut size={18} /> <span className="desktop-only" style={{ paddingRight: '0.4rem' }}>Esci</span>
+        <button onClick={handleLogout} className="btn btn-outline" style={{ flexShrink: 0, padding: '0.6rem', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <LogOut size={18} /> <span className="desktop-only" style={{ paddingRight: '0.25rem' }}>Esci</span>
         </button>
       </header>
 
