@@ -60,7 +60,7 @@ export default function Login() {
   };
 
   return (
-    <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
+    <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100dvh' }}>
       <div className="minimal-panel animate-fade-in" style={{ width: '100%', maxWidth: '380px', padding: '2.5rem 2rem', textAlign: 'center' }}>
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.5rem' }}>
           <div style={{ border: '1px solid var(--border-color)', padding: '1rem', borderRadius: '50%' }}>
