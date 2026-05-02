@@ -1,0 +1,80 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Premium Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#47A1FF" />
+      <stop offset="100%" stop-color="#005EEA" />
+    </linearGradient>
+
+    <!-- Dumbbell Gradient (Match the Background for a clean cutout look) -->
+    <linearGradient id="dumbbelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A84FF" />
+      <stop offset="100%" stop-color="#0055D4" />
+    </linearGradient>
+
+    <!-- Knob Drop Shadow -->
+    <filter id="knobShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000214" flood-opacity="0.35" />
+    </filter>
+
+    <!-- Inner Shadow for the Track to give depth -->
+    <filter id="innerShadow">
+      <feOffset dx="0" dy="10"/>
+      <feGaussianBlur stdDeviation="12" result="offset-blur"/>
+      <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"/>
+      <feFlood flood-color="black" flood-opacity="0.4" result="color"/>
+      <feComposite operator="in" in="color" in2="inverse" result="shadow"/>
+      <feComposite operator="over" in="shadow" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <!-- App Icon Base -->
+  <rect width="1024" height="1024" rx="226" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle border to enhance the app icon shape (iOS style) -->
+  <rect width="1024" height="1024" rx="226" fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="4"/>
+
+  <!-- TOGGLE TRACK -->
+  <rect x="162" y="380" width="700" height="264" rx="132" fill="#000000" fill-opacity="0.2" filter="url(#innerShadow)"/>
+
+  <!-- LAZY SIDE: SOFA -->
+  <!-- Centered at X=294, Y=512 -->
+  <g fill="#ffffff" opacity="0.5">
+    <!-- Backrest -->
+    <rect x="234" y="474" width="120" height="40" rx="10"/>
+    <!-- Seat -->
+    <rect x="224" y="504" width="140" height="30" rx="12"/>
+    <!-- Left Armrest -->
+    <rect x="210" y="494" width="24" height="40" rx="10"/>
+    <!-- Right Armrest -->
+    <rect x="354" y="494" width="24" height="40" rx="10"/>
+    <!-- Legs -->
+    <rect x="234" y="534" width="10" height="16" rx="4"/>
+    <rect x="344" y="534" width="10" height="16" rx="4"/>
+    
+    <!-- Zzz Marks -->
+    <path d="M 284 444 L 300 444 L 284 460 L 300 460" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 314 414 L 338 414 L 314 438 L 338 438" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- ACTIVE KNOB -->
+  <!-- Track width = 700. Right circle center = 162 + 700 - 132 = 730 -->
+  <!-- Track height = 264. Knob radius = 116 (padding = 16) -->
+  <circle cx="730" cy="512" r="116" fill="#ffffff" filter="url(#knobShadow)"/>
+
+  <!-- ACTIVE SIDE: DUMBBELL (Inside Knob) -->
+  <!-- Centered at X=730, Y=512 -->
+  <g fill="url(#dumbbelGrad)">
+    <!-- Handle -->
+    <rect x="696" y="504" width="68" height="16" rx="6"/>
+    <!-- Inner Plates -->
+    <rect x="676" y="472" width="20" height="80" rx="8"/>
+    <rect x="764" y="472" width="20" height="80" rx="8"/>
+    <!-- Outer Plates -->
+    <rect x="660" y="484" width="16" height="56" rx="6"/>
+    <rect x="784" y="484" width="16" height="56" rx="6"/>
+    <!-- Subtle center mark on plates (optional detailing) -->
+    <rect x="684" y="472" width="4" height="80" fill="#000000" fill-opacity="0.1" rx="2"/>
+    <rect x="772" y="472" width="4" height="80" fill="#000000" fill-opacity="0.1" rx="2"/>
+  </g>
+</svg>
